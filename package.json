@@ -1,0 +1,17 @@
+{
+  "name": "nps-adm",
+  "version": "1.0.0",
+  "description": "Projeto Base para o Desenvolvimento do Software de Pesquisa de Satisfação do Cliente",
+  "main": "./server.js",
+  "type": "module",
+  "scripts": {
+    "start": " node ./server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
