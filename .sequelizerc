@@ -1,0 +1,4 @@
+module.exports = {
+    'config':'./app/config/database.js',
+    'migrations-path':'./app/database/migrations/',
+}
