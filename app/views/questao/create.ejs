@@ -1,0 +1,36 @@
+<%-include('../template/header-sidebar') %>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Nova Questão</h1>
+        </div>
+        <!-- Content Row -->
+        <div class="row">
+             <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <form  class="card">
+                            <section class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Descrição</label>
+                                    <input type="text"  class="form-control">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" checked>
+                                    <label class="form-check-label">Ativo?</label>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+             </div>
+        </div> <!-- Content Row -->
+    </div><!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+
+    <%-include('../template/footer') %>
