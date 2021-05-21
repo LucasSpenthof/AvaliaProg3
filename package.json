@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Projeto Base para o Desenvolvimento do Software de Pesquisa de Satisfação do Cliente",
   "main": "./server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": " node ./server.js"
   },
@@ -16,5 +16,8 @@
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
