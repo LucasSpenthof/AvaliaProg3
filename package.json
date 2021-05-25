@@ -5,7 +5,8 @@
   "main": "./server.js",
   "type": "commonjs",
   "scripts": {
-    "start": " node ./server.js"
+    "start": " nodemon .server/.js --ignore /node_modules -e js,html,css,ejs",
+    "testModel": "node ./app/test/testModel.js"
   },
   "keywords": [],
   "author": "",
