@@ -1,7 +1,9 @@
 const Questao = require('../models/Questao')
 class QuestaoController{
     static index(req,res){
-        res.render('questao/index')
+        let questoes = await Questao.findAll({attributes:['descricao','ativo']})
+
+        res.render('questao/index', {questoes})
 		
 	}
 	static create(req,res){
@@ -10,7 +12,6 @@ class QuestaoController{
   static store(req,res){
         let descricao = req.body.descricao
         let ativo = true
-
         let questao = new Questao()
 		questao.descricao = descricao
         questao.ativo = ativo
@@ -18,12 +19,27 @@ class QuestaoController{
         res.redirect('/questao')
 	}
 	static edit(req,res){
-		res.render('questao/edit')
+		let id = req.params.id
+        let questao = await Questao.findByPk(id)
+		res.render('questao/edit', {questao})
 	}
 	static update(req,res){
-		
+		let descricao = req.body.descricao
+        let ativo = true
+        let questao = await Questao.findByPk(id)
+        questao.descricao = descricao
+        questao.ativo = ativo
+
+        await questao.save()
+
+        res.redirect('/questao/')
 	}
 	static destroy(req,res){
-		
+		let id = req.params.id
+        let questao = await Questao.findByPk(id)
+
+        await questao.destroy()
+
+		res.redirect('/questao/')
 	}
 }
