@@ -15,3 +15,4 @@ class Usuario extends Model{
     }
 
 }
+module.exports = Usuario

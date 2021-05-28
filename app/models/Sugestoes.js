@@ -14,3 +14,4 @@ class Sugestoes extends Model{
     }
 
 }
+module.exports = Sugestoes

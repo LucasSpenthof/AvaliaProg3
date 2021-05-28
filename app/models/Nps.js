@@ -13,3 +13,4 @@ class Nps extends Model{
     }
 
 }
+module.exports = Nps

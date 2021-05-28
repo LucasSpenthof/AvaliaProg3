@@ -14,3 +14,4 @@ class Questao extends Model{
     }
 
 }
+module.exports = Questao

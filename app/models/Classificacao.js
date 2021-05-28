@@ -14,3 +14,4 @@ class Classificacao extends Model{
     }
 
 }
+module.exports = Classificacao
