@@ -19,7 +19,17 @@
                               </tr>
                             </thead>
                             <tbody>
-                
+                              <% usuarios.forEach(function(usuario){ %>
+                                <tr>
+                                  <td><%-usuario.id  %></td>
+                                  <td><%-usuario.nome %></td>
+                                  <td><%-usuario.email %></td>
+                                  <td>
+                                    <a class="btn btn-primary" href="/usuario/edit/<%-usuario.id  %>"><i class="bi bi-pencil-square"></i></a>  
+                                    <a class="btn btn-danger" href="/usuario/destroy/<%-usuario.id  %>"><i class="bi bi-trash"></i></a> 
+                                  </td>
+                                </tr>
+                              <% }); %>
                             </tbody>
                           </table>
                           </div>
