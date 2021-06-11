@@ -20,15 +20,15 @@
                             </thead>
                             <tbody>
                               <% usuarios.forEach(function(usuario){ %>
-                                <tr>
-                                  <td><%-usuario.id  %></td>
-                                  <td><%-usuario.nome %></td>
-                                  <td><%-usuario.email %></td>
-                                  <td>
-                                    <a class="btn btn-primary" href="/usuario/edit/<%-usuario.id  %>"><i class="bi bi-pencil-square"></i></a>  
-                                    <a class="btn btn-danger" href="/usuario/destroy/<%-usuario.id  %>"><i class="bi bi-trash"></i></a> 
-                                  </td>
-                                </tr>
+                                 <tr>
+                                   <td><%-usuario.id %></td>
+                                   <td><%-usuario.nome %></td>
+                                   <td><%-usuario.email %></td>
+                                   <td>
+                                     <a href="/usuario/edit/<%-usuario.id %>"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                                     <a href="/usuario/destroy/<%-usuario.id %>" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                                   </td>
+                                 </tr>
                               <% }); %>
                             </tbody>
                           </table>

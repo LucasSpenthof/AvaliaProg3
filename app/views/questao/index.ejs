@@ -6,6 +6,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Gerenciar Questões</h1>
                     </div>
+
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-6">
@@ -19,17 +20,23 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <% questoes.forEach(function(questao){ %>
-                                <tr>
-                                  <td><%-questao.id  %></td>
-                                  <td><%-questao.descricao %></td>
-                                  <td><%-questao.ativo %></td>
-                                  <td>
-                                    <a class="btn btn-primary" href="/questao/edit/<%-questao.id  %>"><i class="bi bi-pencil-square"></i></a>  
-                                    <a class="btn btn-danger" href="/questao/destroy/<%-questao.id  %>"><i class="bi bi-trash"></i></a> 
-                                  </td>
-                                </tr>
-                              <% }); %>
+                             <% questoes.forEach(function(questao){ %>
+                                <tr> 
+                                <td><%-questao.id%></td>
+                                <td><%-questao.descricao%></td>
+                                <td>
+                                    <% if(questao.ativo){ %> 
+                                    <span class="badge rounded-pill bg-success text-light">Sim</span>
+                                    <% }else{ %>
+                                        <span class="badge rounded-pill bg-warning text-light">Não</span>
+                                    <% } %>
+                                </td>    
+                                <td>
+                                    <a href="/questao/edit/<%-questao.id %>" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                    <a href="/questao/destroy/<%-questao.id %>" class="btn btn-danger btn-sm"><i class="bi bi-"><i class="bi bi-trash"></i></i></a>
+                                </td>
+                                </tr>  
+                             <% }) %>    
                             </tbody>
                           </table>
                           </div>
