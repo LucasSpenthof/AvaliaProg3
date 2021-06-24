@@ -10,3 +10,73 @@
     border-radius: 5px;
     width: 400px;
 }
+.cards-container{
+    display: flex;
+}
+
+.dashboard-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:solid 1px #ccc;
+    padding:10px;
+    border-radius:4px;
+    width:200px;
+    border-left: solid 5px #333;
+    background-color:white;
+    margin-right: 5px;
+}
+.dashboard-card-data{
+    display: flex;
+    flex-direction:column;
+}
+.dashboard-card-data h2{
+    font-size: 15px;
+    font-weight: bold;
+}
+.dashboard-card-number{
+    font-weight: bold;
+}
+.dashboard-card-icon i{
+    font-size: 32px;
+}
+
+.card-promotor{
+    border-left-color: #1CC88A;
+}
+.card-promotor .dashboard-card-number{
+    color:#1CC88A;
+}
+.card-promotor span.percent{
+    color:#1CC88A;
+}
+.card-promotor .dashboard-card-icon i{
+    color: #1CC88A;
+}
+.card-neutros{
+    border-left-color: #F6C23E;
+}
+.card-neutros .dashboard-card-number{
+    color:#F6C23E;
+}
+.card-neutros span.percent{
+    color:#F6C23E;
+}
+.card-neutros .dashboard-card-icon i{
+    color: #F6C23E;
+}
+.card-detratores{
+    border-left-color: #E74A3B;
+}
+.card-detratores .dashboard-card-number{
+    color:#E74A3B;
+}
+.card-detratores span.percent{
+    color:#E74A3B;
+}
+.card-detratores .dashboard-card-icon i{
+    color: #E74A3B;
+}
+.card-nps .dashboard-card-number{
+    font-size: 18px;
+}
